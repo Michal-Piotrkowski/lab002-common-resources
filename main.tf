@@ -7,4 +7,8 @@ resource "azurerm_resource_group" "common" {
   tags = merge(local.project_tags, {
     labs = each.value.labs
   })
+
+  lifecycle {
+    prevent_destroy = true
+  }
 }
