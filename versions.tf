@@ -10,9 +10,9 @@ terraform {
       version = "~> 1.3"
     }
   }
-  backend "local" {
-    path = "tfstate/terraform.tfstate"
-  }
+  # backend "local" {
+  #   path = "tfstate/terraform.tfstate"
+  # }
 }
 
 provider "azurerm" {
