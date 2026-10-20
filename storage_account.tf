@@ -24,10 +24,10 @@ resource "azurerm_storage_account" "backend" {
   }
 
   # Network restrictions (opcjonalnie)
-  network_rules {
-    default_action = "Allow" # Zmień na "Deny" dla większego bezpieczeństwa
-    # ip_rules = ["YOUR_IP_ADDRESS"]
-  }
+#   network_rules {
+#     default_action = "Allow" # Zmień na "Deny" dla większego bezpieczeństwa
+#     # ip_rules = ["YOUR_IP_ADDRESS"]
+#   }
 
   tags = merge(local.project_tags, {
     purpose    = "tfstate"
