@@ -89,3 +89,9 @@ variable "contact_emails" {
     error_message = "Podaj co najmniej jeden poprawny adres e-mail, np. imie.nazwisko@student.pk.edu.pl."
   }
 }
+
+variable "enable_access_key" {
+  description = "Czy włączyć generowanie kluczy dostępu (przydatne dla backup/CI/CD)."
+  type        = bool
+  default     = true
+}
